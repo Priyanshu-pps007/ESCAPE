@@ -227,15 +227,9 @@ escape/
 
 Pull requests are welcome. For major changes, open an issue first to discuss what you'd like to change.
 
----
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) for details.
-
----
 
 <div align="center">
   <strong>Built with LangGraph · Groq · Python</strong><br/>
   <em>by <a href="https://github.com/Priyanshu-pps007">Priyanshu Pratap Singh</a></em>
 </div>
+
