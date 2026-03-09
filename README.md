@@ -20,28 +20,11 @@ Under the hood, ESCAPE is a production-grade demonstration of:
 
 ## 🏗️ Architecture Overview
 
-```
-START
-  │
-  ▼
-script_writer_node      ← Generates the overarching storyline & shows intro
-  │
-  ▼
-milestone_writer_node   ← Writes next milestone (goal + task + sound_desc) to disk
-  │
-  ▼
-presenter_node          ← Plays background audio, surfaces narrative to player
-  │
-  ▼
-human_input_node        ← HITL interrupt: pauses graph, waits for player move
-  │
-  ▼
-router_node             ← LLM referee: is the action relevant? yes → next milestone
-  │                                                              no  → warn player (max 3 strikes)
-  └──────────────────────────────────────────────────────────────┐
-                                                                  ▼
-                                                     milestone_writer_node (loop)
-```
+<p align="center">
+  <img src="assets/architecture.png" alt="ESCAPE Agent Graph Architecture" width="520"/>
+</p>
+
+> **How to read this:** The graph starts by loading the first scene (JSON milestone + `.mp3` audio). The **Presenter Node** narrates and triggers a HITL pause for player input. The **Evaluator Node** judges the response — valid actions advance to the next milestone, invalid ones add a strike. The **Game Logic Router** decides the outcome: 3 strikes → Death Node (game over), all milestones cleared → Victory Node (narrative ending).
 
 ### Agent Roles
 
@@ -227,9 +210,9 @@ escape/
 
 Pull requests are welcome. For major changes, open an issue first to discuss what you'd like to change.
 
+---
 
 <div align="center">
   <strong>Built with LangGraph · Groq · Python</strong><br/>
   <em>by <a href="https://github.com/Priyanshu-pps007">Priyanshu Pratap Singh</a></em>
 </div>
-
