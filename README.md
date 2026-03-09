@@ -17,7 +17,7 @@ Under the hood, ESCAPE is a production-grade demonstration of:
 - **LLM-driven dynamic content generation** — no hardcoded story
 
 ---
-<https://www.youtube.com/watch?v=vREN9k8WfZc&t=14s>
+Demo 👉🏻 <https://www.youtube.com/watch?v=vREN9k8WfZc>
 
 ## 🏗️ Architecture Overview
 
@@ -217,5 +217,6 @@ Pull requests are welcome. For major changes, open an issue first to discuss wha
   <strong>Built with LangGraph · Groq · Python</strong><br/>
   <em>by <a href="https://github.com/Priyanshu-pps007">Priyanshu Pratap Singh</a></em>
 </div>
+
 
 
